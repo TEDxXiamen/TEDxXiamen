@@ -1,1 +1,1 @@
-[![TEDxXiamen](https://tedxximen.cn)](https://tedxximen.cn)
+[TEDxXiamen](https://tedxximen.cn)
