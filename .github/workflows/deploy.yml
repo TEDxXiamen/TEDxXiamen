@@ -92,7 +92,7 @@ jobs:
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USERNAME }}
-          key: ${{ secrets.PRIVATE_KEY }}
+          password: ${{ secrets.PRIVATE_KEY }}
           # 第1、2行脚本对应第7步，服务器登陆阿里云 docker 仓库，下载目标 docker 镜像
           # 第3、4行脚本对应第8步，删除原有后端服务，使用新镜像部署新的后端服务
           script: |
