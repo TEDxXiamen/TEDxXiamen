@@ -22,7 +22,7 @@ jobs:
       matrix:
         node-version: [14.x]
     steps:
-      # 定义生产环境的环境变量，只在main分支执行
+      # 定义生产环境的环境变量，只在main分支执行。
       - name: Set env to production
         if: endsWith(github.ref, '/main')
         run: |
