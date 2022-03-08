@@ -22,7 +22,7 @@ jobs:
       matrix:
         node-version: [14.x]
     steps:
-      # 定义生产环境的环境变量，只在main分支执行。
+      # 定义生产环境的环境变量，只在main分支执行
       - name: Set env to production
         if: endsWith(github.ref, '/main')
         run: |
@@ -49,11 +49,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
 
-      # 对应第3步，执行打包命令
+      # 对应第3步，安装依赖，执行打包命令
       - name: "Build Front"
+        # run: |
+        #   npm i
+        #   npm run build
         run: |
-          npm i
-          npm run build
+          yarn
+          yarn run build
 
       # 第4步的准备工作，登陆OSS
       # - name: Set up OSS
